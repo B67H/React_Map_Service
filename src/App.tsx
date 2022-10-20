@@ -1,9 +1,12 @@
+import DynamicMap from "./Map/DynamicMap";
+import KakaoMapScriptLoader from "./Map/KakaoMapScriptLoader";
+
 const App = () => {
   return (
-    <div className="react">
-      Hello World!
-    </div>
-  )
-}
+    <KakaoMapScriptLoader>
+      <DynamicMap/>
+    </KakaoMapScriptLoader>
+  );
+};
 
-export default App
+export default App;
