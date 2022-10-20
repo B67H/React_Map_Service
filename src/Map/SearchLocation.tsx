@@ -5,6 +5,7 @@ import { PlaceType } from "./mapTypes";
 
 interface SeacrhLocationProps {
   onUpdatePlaces: (places: PlaceType[]) => void;
+  onSelect : (placeId : string) => void;
 }
 
 const SearchLocation = (props: SeacrhLocationProps) => {
@@ -65,6 +66,7 @@ const SearchLocation = (props: SeacrhLocationProps) => {
   const handleItemClick = (place: PlaceType) => {
     map.setCenter(place.position);
     map.setLevel(4);
+    props.onSelect(place.id)
   };
 
   return (
